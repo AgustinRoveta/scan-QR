@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
               icon: const Icon(Icons.delete_outline))
         ],
       ),
-      body: _HomePageBody(),
+      body: const _HomePageBody(),
       // bottomNavigationBar
       bottomNavigationBar: const CustomNavigationBar(),
       floatingActionButton: const ScanButton(),
@@ -59,12 +59,12 @@ class _HomePageBody extends StatelessWidget {
     switch (currentIndex) {
       case 0:
         scanListProvider.cargarScansByTipo('geo');
-        return MapasPage();
+        return const MapasPage();
       case 1:
         scanListProvider.cargarScansByTipo('http');
-        return DireccionesPage();
+        return const DireccionesPage();
       default:
-        return MapasPage();
+        return const MapasPage();
     }
   }
 }
